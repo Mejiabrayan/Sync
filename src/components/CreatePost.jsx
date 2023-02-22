@@ -10,9 +10,9 @@ function CreatePost() {
   };
 
   return (
-    <form className='mt-6' onSubmit={handleSubmit}>
+    <form className='mt-6 bg-gray-200 shadow-md rounded-lg p-4' onSubmit={handleSubmit}>
       <textarea
-        className='w-full border border-gray-400 rounded-md p-2 mb-2'
+        className='w-full border border-gray-200 rounded-md p-2 mb-2'
         placeholder="What's on your mind?"
         value={content}
         onChange={(e) => setContent(e.target.value)}

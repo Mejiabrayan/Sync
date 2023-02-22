@@ -1,7 +1,6 @@
 import React from 'react';
-import Dashboard from './components/DashBoard';
+import Dashboard from './components/Dashboard';
 import Feed from './components/Feed';
-import SearchInput from './components/SearchInput';
 
 function App() {
   return (
