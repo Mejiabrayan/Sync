@@ -13,7 +13,7 @@ function RecentJoin() {
         return {
           name: user.name,
           profileImg: `https://via.placeholder.com/150?text=${user.username}`,
-          stockImg: `https://source.unsplash.com/random/150x150/?${user.name}`,
+          stockImg: `https://source.unsplash.com/random/100x100/?${user.name}`,
         };
       });
       setProfiles(profileData);
@@ -22,21 +22,28 @@ function RecentJoin() {
   }, []);
 
   return (
-    <div className="bg-gray-50 py-8">
+    <div className="mt-5 bg-gradient-to-br from-red-500 via-blue-600 to-blue-500 py-4 rounded-md shadow-md">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-3xl leading-9 font-extrabold text-gray-900 sm:text-4xl sm:leading-10 mb-8">
+        <h1 className="text-2xl text-white sm:text-3xl md:text-4xl leading-9 font-extrabold mb-4 sm:mb-6">
           Recently Joined 🥳
         </h1>
-        <div className="flex justify-center items-center flex-wrap -mx-4">
+        <div className="flex flex-wrap justify-center items-center pb-2">
           {profiles.map((profile, index) => (
             <div
               key={index}
-              className="w-24 h-24 rounded-full mx-4 mb-8 overflow-hidden"
+              className="rounded-full mx-2 sm:mx-4 mb-4 sm:mb-8 sm:overflow-hidden"
+              style={{ width: '4rem', height: '4rem' }}
             >
               <img
-                className="object-cover object-center w-full h-full"
+                className="object-cover object-center rounded-full"
                 src={profile.stockImg}
                 alt={profile.name}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  maxWidth: '5rem',
+                  maxHeight: '5rem',
+                }}
               />
             </div>
           ))}

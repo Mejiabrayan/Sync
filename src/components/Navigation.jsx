@@ -15,7 +15,7 @@ function Navigation() {
         <a href='#' className='text-gray-800 mr-4 hover:text-gray-900'>
           <BiMessageAltDetail />
         </a>
-       <button className='nav-btn bg-gradient-to-r from-purple-500 to-red-500 text-white px-4 py-2 rounded-md hover:from-orange-500 hover:to-orange-600' style={{ fontStyle: 'italic' }}>
+       <button className='nav-btn bg-gradient-to-r from-purple-500 to-red-500 text-white px-4 py-2 rounded-md hover:from-red-500 hover:to-purple-600' style={{ fontStyle: 'italic' }}>
         Upload
         </button>
       </div>
