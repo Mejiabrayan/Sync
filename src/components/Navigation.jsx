@@ -1,6 +1,8 @@
 import React from 'react';
 import { FaHome, FaInfoCircle } from 'react-icons/fa';
 import SearchInput from './SearchInput';
+import {BsBell} from 'react-icons/bs';
+import {BiMessageAltDetail} from 'react-icons/bi';
 
 function Navigation() {
   return (
@@ -8,12 +10,12 @@ function Navigation() {
       <SearchInput />
       <div className='flex items-center'>
         <a href='#' className='text-gray-800 mr-4 hover:text-gray-900'>
-          <FaHome />
+        <BsBell />
         </a>
         <a href='#' className='text-gray-800 mr-4 hover:text-gray-900'>
-          <FaInfoCircle />
+          <BiMessageAltDetail />
         </a>
-        <button className='bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600'>
+        <button className='bg-gradient-to-r from-purple-500 to-red-500 text-white px-4 py-2 rounded-md hover:from-orange-500 hover:to-orange-600'>
           Sign In
         </button>
       </div>

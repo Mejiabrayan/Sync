@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaHome, FaCompass, FaEnvelope } from 'react-icons/fa';
 import { GrLinkNext } from 'react-icons/gr';
+import {CiMail} from 'react-icons/ci';
 
 function DashboardLinks() {
   return (
@@ -23,7 +24,7 @@ function DashboardLinks() {
       </div>
       <div className="flex items-center mb-4">
         <div className="flex items-center">
-          <FaEnvelope className="text-xl w-6 h-6 mr-2" />
+          <CiMail className="text-xl w-6 h-6 mr-2" />
           <a href="#" className="text-gray-500 hover:text-gray-700">
             Messages
           </a>

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Post from './Post';
-import SearchInput from './SearchInput';
 import Navigation from './Navigation';
 
 
@@ -40,7 +39,7 @@ function Feed() {
   return (
     <div className='p-6 mt-5'>
       <Navigation />
-      <div className='bg-white shadow-md rounded-md mt-5'>
+      <div className='bg-gray-200 shadow-md rounded-md mt-5'>
         <h1 className='text-3xl font-bold mb-4 px-6 pt-6'>Feed</h1>
         <div className='space-y-4 px-6 pb-6'>
           {posts.map((post) => (
