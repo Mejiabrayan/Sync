@@ -3,6 +3,7 @@ import Post from './Post';
 import Navigation from './Navigation';
 import CreatePost from './CreatePost';
 import RecentlyJoined from './RecentlyJoined';
+import Stats from './Stats';
 import axios from 'axios';
 
 function Feed() {
@@ -36,6 +37,7 @@ function Feed() {
     <div className='p-6 mt-5'>
       <Navigation />
       <RecentlyJoined />
+      <Stats />
       <CreatePost onCreatePost={handleCreatePost} />
       <div className='bg-gray-200 shadow-md rounded-md mt-5'>
         <h1 className='text-3xl font-bold mb-4 px-6 pt-6'>Feed</h1>

@@ -22,7 +22,7 @@ function RecentJoin() {
   }, []);
 
   return (
-    <div className="mt-5 bg-gradient-to-br from-red-500 via-blue-600 to-blue-500 py-4 rounded-md shadow-md">
+    <div className="mt-5 bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-500 py-4 rounded-md shadow-md">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-2xl text-white sm:text-3xl md:text-4xl leading-9 font-extrabold mb-4 sm:mb-6">
           Recently Joined 🥳

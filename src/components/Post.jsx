@@ -7,15 +7,14 @@ function Post({ post, onLike }) {
   const [author, setAuthor] = useState('Unknown');
   const [profile, setProfile] = useState('');
   const [timestamp, setTimestamp] = useState('');
+  const [randomImage, setRandomImage] = useState('');
 
   useEffect(() => {
     async function fetchData() {
       const [authorRes, imageRes, commentsRes] = await Promise.all([
         axios.get(`https://jsonplaceholder.typicode.com/users/${post.userId}`),
-        axios.get('https://picsum.photos/50'),
-        axios.get(
-          `https://jsonplaceholder.typicode.com/posts/${post.id}/comments`
-        ),
+        axios.get('https://source.unsplash.com/random/50x50'),
+        axios.get(`https://jsonplaceholder.typicode.com/posts/${post.id}/comments`)
       ]);
 
       setAuthor(authorRes.data.name);
@@ -57,30 +56,29 @@ function Post({ post, onLike }) {
         </button>
       </div>
       <p className='text-gray-800'>{post.body}</p>
-      {comments && comments.length > 0 && (
+      {comments && comments.length > 0 &&
         <div className='flex flex-col mt-2'>
           <h3 className='font-medium mb-2'>Comments ({comments.length})</h3>
-          {displayedComments.map((comment) => (
+          {displayedComments.map(comment => (
             <div key={comment.id} className='border-b pb-2'>
               <p className='text-gray-800 font-medium'>{comment.name}</p>
               <p className='text-gray-600'>{comment.body}</p>
             </div>
           ))}
-          {comments.length > 1 && (
+          {comments.length > 1 &&
             <button
               className='flex items-center text-gray-500 hover:text-blue-500'
               onClick={() => setShowMoreComments(!showMoreComments)}
             >
               <BsGrid3X3Gap className='mr-2' />
               <span className='text-sm'>
-                {showMoreComments
-                  ? 'Hide comments'
-                  : `View all ${comments.length} comments`}
+                {showMoreComments ? 'Hide comments' : `View all ${comments.length} comments`}
               </span>
             </button>
-          )}
+          }
         </div>
-      )}
+      }
+
     </div>
   );
 }
