@@ -3,14 +3,14 @@ import { BsGrid } from 'react-icons/bs';
 import { BiSearch } from 'react-icons/bi';
 import { IoStatsChartOutline, IoExitOutline } from 'react-icons/io5';
 import { GoMail } from 'react-icons/go';
-import { IoSettingsOutline } from 'react-icons/io5';
+import {IoSettingsOutline} from 'react-icons/io5';
 
 function DashboardLink({ icon, text, href }) {
   return (
     <div className="flex items-center mb-4">
-      <div className="flex items-center gap-2">
+      <div className="flex items-center">
         {icon}
-        <a href={href} className="text-gray-700 hover:text-purple-500">
+        <a href={href} className="text-gray-500 hover:text-gray-700">
           {text}
         </a>
       </div>
@@ -21,12 +21,12 @@ function DashboardLink({ icon, text, href }) {
 function DashboardLinks() {
   return (
     <div className="flex flex-col items-center justify-center">
-      <DashboardLink icon={<BsGrid className="text-xl" />} text="Feed" href="#" />
-      <DashboardLink icon={<BiSearch className="text-xl" />} text="Explore" href="#" />
-      <DashboardLink icon={<IoStatsChartOutline className="text-xl" />} text="Stats" href="#" />
-      <DashboardLink icon={<GoMail className="text-xl" />} text="Messages" href="#" />
-      <DashboardLink icon={<IoSettingsOutline className="text-xl" />} text="Settings" href="#" />
-      <DashboardLink icon={<IoExitOutline className="text-xl" />} text="Logout" href="/logout" />
+      <DashboardLink icon={<BsGrid className="text-xl mr-2" />} text="Feed" href="#" />
+      <DashboardLink icon={<BiSearch className="text-xl mr-2" />} text="Explore" href="#" />
+      <DashboardLink icon={<IoStatsChartOutline className="text-xl mr-2" />} text="Stats" href="#" />
+      <DashboardLink icon={<GoMail className="text-xl mr-2" />} text="Messages" href="#" />
+      <DashboardLink icon={<IoSettingsOutline className="text-xl mr-2" />} text="Settings" href="#" />
+      <DashboardLink icon={<IoExitOutline className="text-xl mr-2" />} text="Login" href="/login" />
     </div>
   );
 }

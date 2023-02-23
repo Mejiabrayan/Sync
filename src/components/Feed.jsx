@@ -5,6 +5,7 @@ import CreatePost from './CreatePost';
 import RecentlyJoined from './RecentlyJoined';
 import Stats from './Stats';
 import axios from 'axios';
+import FeedLayout from './FeedLayout';
 
 function Feed() {
   const [posts, setPosts] = useState([]);
@@ -34,6 +35,7 @@ function Feed() {
   };
 
   return (
+    <FeedLayout>
     <div className='p-6 mt-5'>
       <Navigation />
       <RecentlyJoined />
@@ -54,6 +56,7 @@ function Feed() {
         </div>
       </div>
     </div>
+    </FeedLayout>
   );
 }
 
