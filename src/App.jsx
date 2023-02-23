@@ -1,18 +1,14 @@
 import React from 'react';
-import Dashboard from './components/Dashboard';
-import Feed from './components/Feed';
+import HomePage from './pages/HomePage';
+
 
 function App() {
   return (
-    <div className='grid grid-cols-4 h-screen'>
-    
-      <div className='col-span-1 bg-gray-100'>
-        <Dashboard />
+    <div className='flex flex-col h-screen'>
+      <div className='flex-1'>
+        <HomePage />
       </div>
-    
-      <div className='col-span-3 overflow-scroll'>
-        <Feed />
-      </div>
+   
     </div>
   );
 }
